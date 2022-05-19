@@ -1,7 +1,7 @@
 import React from "react";
 import { usePost } from "../hooks/usePost";
 const Post = ({ postText, gif, id }) => {
-  const { setPostList, postList } = usePost();
+  const { setPostList } = usePost();
 
   const handleDeletePost = (postId) => {
     setPostList((prevState) => prevState.filter((post) => post._id !== postId));
