@@ -151,7 +151,7 @@ const CreatePost = ({ setShowModal }) => {
             {showGif && (
               <div className="flex flex-col items-center absolute -top-72 -right-16 w-[500px] bg-neutral-700 rounded-md p-2 border border-neutral-500 ">
                 <button
-                  className="self-start text-white rounded-full bg-neutral-600 py-1 px-3 text-2xl mb-1 hover:bg-neutral-500"
+                  className="self-start text-white rounded-full bg-neutral-600 py-0 px-3 mb-2 text-2xl mb-1 hover:bg-neutral-500"
                   onClick={() => setShowGif(false)}
                 >
                   &#129092;
@@ -159,7 +159,7 @@ const CreatePost = ({ setShowModal }) => {
                 <input
                   type="text"
                   onChange={optimizedDebounce}
-                  className="py-2 pl-2 text-slate-100 text-lg px-1 mb-1 rounded-lg bg-neutral-600 w-full"
+                  className="py-2 pl-2 text-slate-100 text-lg px-1 mb-1 rounded-lg bg-neutral-600 w-[99%]"
                   placeholder="Search GIF accross apps"
                 />
 
@@ -180,7 +180,11 @@ const CreatePost = ({ setShowModal }) => {
                                 key={id}
                                 onClick={() => handleUserSelectedGif(url)}
                               >
-                                <img src={url} alt="gif" className="w-full" />
+                                <img
+                                  src={url}
+                                  alt="gif"
+                                  className="w-full rounded-md"
+                                />
                               </div>
                             );
                           }
