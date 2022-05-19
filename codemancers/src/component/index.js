@@ -1,3 +1,5 @@
-import { SearchBar } from "./SearchBar";
+import { CreatePost } from "./CreatePost";
+import { PostList } from "./PostList";
+import { Post } from "./Post";
 
-export { SearchBar };
+export { CreatePost, PostList, Post };
