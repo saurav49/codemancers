@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const PostContext = createContext();
 
 export const PostProvider = ({ children }) => {
-  const [postList, setPostList] = useState({});
+  const [postList, setPostList] = useState([]);
   return (
     <PostContext.Provider
       value={{

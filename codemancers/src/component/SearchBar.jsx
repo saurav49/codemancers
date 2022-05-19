@@ -86,16 +86,18 @@ const SearchBar = () => {
         ]);
   };
 
+  console.log(postList);
+
   return (
     <div className="w-[300px] border border-2 border-slate-200 rounded-sm my-0 mx-auto flex flex-col items-start justify-between relative">
       <textarea
         type="text"
         value={textInpt}
         onChange={(e) => setTextInpt(e.target.value)}
-        className="w-full border border-2 border-slate-400 p-1 rounded-sm"
+        className={`w-full border border-2 border-slate-400 p-1 rounded-sm`}
         placeholder="write something here"
       />
-      {textInptError && <span>{textInptError}</span>}
+      {textInptError && <span className="text-red-400">{textInptError}</span>}
       {selectedGif && (
         <img
           src={selectedGif}
